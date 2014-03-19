@@ -1,6 +1,9 @@
 latest-tweets-php-o-auth
 ========================
 
+UPDATE: My version doesn't use caching file. Calls API each time. 
+
+
 Twitters API v1.0 has now been retired. Here's a way you can pull your tweets from Twitter using PHP and OAuth.
 
 Overview

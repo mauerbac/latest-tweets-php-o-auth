@@ -91,14 +91,9 @@
 		// A flag so we know if the feed was successfully parsed.
 		$tweet_found         = false;
 		
-		// Show cached version of tweets, if it's less than $cachetime.
-		if (time() - $cachetime < $cache_file_created) {
-	 		$tweet_found = true;
-			// Display tweets from the cache.
-			readfile($cache_file);		 
-		} else {
 		
-		// Cache file not found, or old. Authenticae app.
+		
+		// start to auth app
 		$connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
 		
 			if($connection){
@@ -185,7 +180,6 @@
 			
 		}
 		
-	}
 	
 	// Display latest tweets. (Modify username to your Twitter handle)
 	display_latest_tweets('andrew_biggart');
